@@ -1,0 +1,20 @@
+header {
+    .navbar {
+        .container-fluid {
+            img {
+                width: 40px;
+            }
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            &.active {
+                                background-color: lighten($color: #212529, $amount: 10%) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
