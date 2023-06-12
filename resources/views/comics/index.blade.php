@@ -6,7 +6,7 @@
         <table class="table table-dark">
             <thead>
                 <tr>
-                    <th scope="col">#id</th>
+                    {{-- <th scope="col">#id</th> --}}
                     <th scope="col">Title</th>
                     <th scope="col">Series</th>
                     <th scope="col">Actions</th>
@@ -15,7 +15,7 @@
             <tbody>
                 @foreach ($comics as $comic)
                     <tr>
-                        <td>{{ $comic->id }}</td>
+                        {{-- <td>{{ $comic->id }}</td> --}}
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>
