@@ -1,7 +1,9 @@
 <header>
     <nav class="navbar border-primary navbar-expand-lg bg-dark nav-tabs pb-0 pt-3">
         <div class="container-fluid">
-            <img src="/img/dc-logo.png" class="m-1 me-3" alt="logo">
+            <div class="logo-container">
+                <img src="/img/dc-logo.png" class="m-1 me-3" alt="logo">
+            </div>
             <div class="collapse navbar-collapse text-danger" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">

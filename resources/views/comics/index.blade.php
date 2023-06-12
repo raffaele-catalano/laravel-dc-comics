@@ -19,8 +19,9 @@
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>
-                            <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary fw-bold text-uppercase">go</a>
-                            <a href="#" class="btn btn-warning fw-bold text-uppercase">edit</a>
+                            <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary fw-bold"><i class="fa-brands fa-golang fa-lg"></i></a>
+                            <a href="#" class="btn btn-warning fw-bold"><i class="fa-solid fa-pencil"></i></a>
+                            <a href="#" class="btn btn-danger fw-bold"><i class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>
                 @endforeach
