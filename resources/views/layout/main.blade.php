@@ -20,6 +20,8 @@
 
 <body class="bg-dark">
 
+    @include('partials.header')
+
     <main class="text-light">
         <div class="main-wrapper">
             @yield('content')
