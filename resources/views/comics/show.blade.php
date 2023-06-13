@@ -5,7 +5,7 @@
             <h2 class="my-1 text-center text-warning fw-bold align-middle">{{ $comic->title }}</h2>
         </div>
         <div class="edit-container d-flex align-items-center my-2">
-            <a href="#" class="btn btn-info fw-bold"><i class="fa-solid fa-pencil fa-lg"></i></a>
+            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-info fw-bold"><i class="fa-solid fa-pencil fa-lg"></i></a>
         </div>
     <div class="row row-cols-2 w-75 d-flex justify-content-center align-items-center">
         <div class="col d-flex align-items-end flex-column">
