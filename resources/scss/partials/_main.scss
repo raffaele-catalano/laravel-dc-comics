@@ -1,11 +1,14 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    .container {
+body {
+    overflow-y: hidden;
+    main {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
