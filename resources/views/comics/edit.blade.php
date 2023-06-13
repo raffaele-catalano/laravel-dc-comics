@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="my-2 fw-bold text-center">{{ $comic->title }}</h2>
+        <h2 class="my-2 fw-bold text-center">Edit: <span class="text-primary">{{ $comic->title }}</span></h2>
 
         @if ($errors->any())
             <div class="alert alert-warning" role="alert">
@@ -15,13 +15,15 @@
             </div>
         @endif
 
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic) }}" method="POST">
 
             @csrf
 
+            @method('PUT')
+
             <div class="mb-3">
                 <label for="title" class="form-label">Title (*)</label>
-                <input id="title" value="{{ old('title') }}" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="Title" type="text">
+                <input id="title" value="{{ old('title', $comic->title) }}" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="Title" type="text">
                     @error('title')
                         <p class="text-danger fw-bold">{{ $message }}</p>
                     @enderror
@@ -29,7 +31,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea cols="30" rows="10" id="description" value="{{ old('description') }}" class="form-control @error('description') is-invalid @enderror" name="description" placeholder="Description" type="text"></textarea>
+                <textarea cols="30" rows="10" id="description" value="{{ old('description', $comic->description) }}" class="form-control @error('description') is-invalid @enderror" name="description" placeholder="Description" type="text"></textarea>
                     @error('description')
                         <p class="text-danger fw-bold">{{ $message }}</p>
                     @enderror
@@ -37,7 +39,7 @@
 
             <div class="mb-3">
                 <label for="thumb" class="form-label">Thumb Path (*)</label>
-                <input id="thumb" value="{{ old('thumb') }}" class="form-control @error('thumb') is-invalid @enderror"
+                <input id="thumb" value="{{ old('thumb', $comic->thumb) }}" class="form-control @error('thumb') is-invalid @enderror"
                 name="thumb" placeholder="Thumb Path" type="text">
                     @error('thumb')
                         <p class="text-danger fw-bold">{{ $message }}</p>
@@ -46,7 +48,7 @@
 
             <div class="mb-3">
                 <label for="price" class="form-label">Price (*)</label>
-                <input id="price" value="{{ old('price') }}" class="form-control @error('price') is-invalid @enderror"
+                <input id="price" value="{{ old('price', $comic->price) }}" class="form-control @error('price') is-invalid @enderror"
                 name="price" placeholder="Price" type="text">
                     @error('price')
                         <p class="text-danger fw-bold">{{ $message }}</p>
@@ -55,7 +57,7 @@
 
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
-                <input id="series" value="{{ old('series') }}" class="form-control @error('series') is-invalid @enderror"
+                <input id="series" value="{{ old('series', $comic->series) }}" class="form-control @error('series') is-invalid @enderror"
                 name="series" placeholder="Series" type="text">
                     @error('series')
                         <p class="text-danger fw-bold">{{ $message }}</p>
@@ -64,8 +66,8 @@
 
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Sale Date (*)</label>
-                <input id="sale_date" value="{{ old('sale_date') }}"
-                class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" placeholder="Sale Date"
+                <input id="sale_date" value="{{ old('sale_date', $comic->sale_date) }}"
+                class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" placeholder="YYYY-MM-DD"
                 type="text">
                     @error('sale_date')
                         <p class="text-danger fw-bold">{{ $message }}</p>
@@ -74,7 +76,7 @@
 
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
-                <input id="type" value="{{ old('type') }}"
+                <input id="type" value="{{ old('type', $comic->type) }}"
                 class="form-control @error('type') is-invalid @enderror" name="type" placeholder="Type"
                 type="text">
                     @error('type')
@@ -84,7 +86,7 @@
 
             <div class="mb-3">
                 <label for="artists" class="form-label">Artists</label>
-                <input id="artists" value="{{ old('artists') }}"
+                <input id="artists" value="{{ old('artists', $comic->artists) }}"
                 class="form-control @error('artists') is-invalid @enderror" name="artists" placeholder="Artists"
                 type="text">
                     @error('artists')
@@ -94,7 +96,7 @@
 
             <div class="mb-3">
                 <label for="writers" class="form-label">Writers</label>
-                <input id="writers" value="{{ old('writers') }}"
+                <input id="writers" value="{{ old('writers', $comic->writers) }}"
                 class="form-control @error('writers') is-invalid @enderror" name="writers" placeholder="Writers"
                 type="text">
                     @error('writers')

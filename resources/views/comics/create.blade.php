@@ -65,7 +65,7 @@
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Sale Date (*)</label>
                 <input id="sale_date" value="{{ old('sale_date') }}"
-                class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" placeholder="Sale Date"
+                class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" placeholder="YYYY-MM-DD"
                 type="text">
                     @error('sale_date')
                         <p class="text-danger fw-bold">{{ $message }}</p>
