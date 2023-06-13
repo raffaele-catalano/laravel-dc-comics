@@ -5,7 +5,7 @@
         <div class="title-container d-flex justify-content-center">
             <h2 class="m-3 text-center text-primary fw-bold align-middle">Comics List</h2>
             <div class="create-container d-flex align-items-center">
-                <a href="#" class="btn btn-success fw-bold"><i class="fa-solid fa-plus fa-lg"></i></a>
+                <a href="{{ route('comics.create') }}" class="btn btn-success fw-bold"><i class="fa-solid fa-plus fa-lg"></i></a>
             </div>
         </div>
         <table class="table table-dark">
