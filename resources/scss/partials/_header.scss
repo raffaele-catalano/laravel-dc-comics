@@ -9,7 +9,7 @@ header {
                     .nav-item {
                         .nav-link {
                             &.active {
-                                background-color: lighten($color: #212529, $amount: 10%) !important;
+                                background-color: lighten($color: #212529, $amount: 50%) !important;
                             }
                         }
                     }

@@ -7,50 +7,5 @@ main {
     .container {
         display: flex;
         flex-direction: column;
-        // debug
-        // border: 1px solid goldenrod;
-        .btn-movies {
-            align-self: center;
-        }
-        .logo-container {
-            display: flex;
-            justify-content: center;
-        }
     }
-    .movies-container {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: 100%;
-        .row {
-            .card {
-                position: relative;
-                height: 500px;
-                //debug
-                // border: 2px solid red;
-                img {
-                    align-self: center;
-                }
-                .btn-details {
-                    position: absolute;
-                    bottom: 5px;
-                    left: 25%;
-                    // align-self: center;
-                }
-            }
-        }
-        .btn-home {
-            // width: 50px;
-            align-self: center;
-        }
-    }
-}
-.card-details-img {
-    img {
-        width: 350px;
-    }
-}
-
-.btn-movies-details {
-    align-self: center;
 }

@@ -11,7 +11,7 @@
                             href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border-primary text-primary fw-bold fs-5 {{ Route::currentRouteName() === 'movies' ? 'active' : '' }}"
+                        <a class="nav-link border-primary text-primary fw-bold fs-5 {{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}"
                             href="{{ route('comics.index') }}">Comics List</a>
                     </li>
                 </ul>
