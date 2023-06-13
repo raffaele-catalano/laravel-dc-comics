@@ -26,7 +26,7 @@
     @include('partials.header')
 
     <main class="text-light">
-        <div class="main-wrapper d-flex flex-column align-items-center">
+        <div class="main-wrapper d-flex flex-column align-items-center w-75">
             @yield('content')
         </div>
     </main>

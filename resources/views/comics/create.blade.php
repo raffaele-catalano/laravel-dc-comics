@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container">
-        <h2 class="my-2 fw-bold">Add a new <span class="text-primary">Comic</span></h2>
+        <h2 class="my-2 fw-bold text-center">Add a new <span class="text-primary">Comic</span></h2>
 
-        <form action="{{ route('comics.store') }}" method="POST" class="bg-dark">
+        <form action="{{ route('comics.store') }}" method="POST">
 
             @csrf
 
@@ -15,15 +15,15 @@
             </div>
 
             <div class="mb-3">
-                <label for="thumb" class="form-label">Thumb Path (*)</label>
-                <input id="thumb" value="{{ old('thumb') }}" class="form-control"
-                    name="thumb" placeholder="Thumb Path" type="text">
+                <label for="description" class="form-label">Description</label>
+                <textarea cols="30" rows="10" id="description" value="{{ old('description') }}" class="form-control"
+                    name="description" placeholder="Description" type="text"></textarea>
             </div>
 
             <div class="mb-3">
-                <label for="description" class="form-label">Description (*)</label>
-                <input id="description" value="{{ old('description') }}" class="form-control"
-                    name="description" placeholder="Description" type="text">
+                <label for="thumb" class="form-label">Thumb Path (*)</label>
+                <input id="thumb" value="{{ old('thumb') }}" class="form-control"
+                    name="thumb" placeholder="Thumb Path" type="text">
             </div>
 
             <div class="mb-3">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="series" class="form-label">Series (*)</label>
+                <label for="series" class="form-label">Series</label>
                 <input id="series" value="{{ old('series') }}" class="form-control"
                     name="series" placeholder="Series" type="text">
             </div>
@@ -46,29 +46,29 @@
             </div>
 
             <div class="mb-3">
-                <label for="type" class="form-label">Type (*)</label>
+                <label for="type" class="form-label">Type</label>
                 <input id="type" value="{{ old('type') }}"
                     class="form-control" name="type" placeholder="Type"
                     type="text">
             </div>
 
             <div class="mb-3">
-                <label for="artists" class="form-label">Artists (*)</label>
+                <label for="artists" class="form-label">Artists</label>
                 <input id="artists" value="{{ old('artists') }}"
                     class="form-control" name="artists" placeholder="Artists"
                     type="text">
             </div>
 
             <div class="mb-3">
-                <label for="writers" class="form-label">Writers (*)</label>
+                <label for="writers" class="form-label">Writers</label>
                 <input id="writers" value="{{ old('writers') }}"
                     class="form-control" name="writers" placeholder="Writers"
                     type="text">
             </div>
 
-
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="btn-container d-flex justify-content-center mb-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
 
         </form>
     </div>
