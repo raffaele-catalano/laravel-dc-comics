@@ -82,6 +82,8 @@ class ComicController extends Controller
         $form_data = $request->all();
 
         $comic->update(($form_data));
+
+        return view('comics.show', compact('comic'));
     }
 
     /**
